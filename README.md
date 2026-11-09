@@ -35,3 +35,7 @@ Text that people write themselves is ignored: posts, comments, messages and the 
 ## If something slips through
 
 LinkedIn changes its UI often. If a reel gets past the extension, right-click it, choose **Inspect**, and look at the heading text or the buttons' `aria-label`s. Then add the new wording to `CAROUSEL_HEADING` or `PLAYER_NAV` at the top of `content.js`. Click the reload icon on the extension card in `chrome://extensions`, then refresh LinkedIn.
+
+## License
+
+[MIT](LICENSE)
