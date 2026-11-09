@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reels Blocker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon48.png" alt="" width="32" height="32" />
+      <div class="title">
+        <h1>Reels Blocker</h1>
+        <p id="status">On for LinkedIn</p>
+      </div>
+      <label class="switch" title="Turn blocking on or off">
+        <input type="checkbox" id="enabled" aria-label="Blocking on" />
+        <span class="track"></span>
+      </label>
+    </header>
+
+    <main id="options">
+      <label class="row">
+        <span class="text">
+          <strong>Block the reels player</strong>
+          <small>Closes the full-screen vertical video feed and redirects video-feed pages to your home feed.</small>
+        </span>
+        <span class="switch">
+          <input type="checkbox" data-key="blockPlayer" />
+          <span class="track"></span>
+        </span>
+      </label>
+
+      <label class="row">
+        <span class="text">
+          <strong>Hide "Videos for you"</strong>
+          <small>Removes reels carousels from the feed.</small>
+        </span>
+        <span class="switch">
+          <input type="checkbox" data-key="hideCarousels" />
+          <span class="track"></span>
+        </span>
+      </label>
+
+      <label class="row">
+        <span class="text">
+          <strong>Hide the Video tab</strong>
+          <small>Removes a video-feed link from the top navigation.</small>
+        </span>
+        <span class="switch">
+          <input type="checkbox" data-key="hideNavTab" />
+          <span class="track"></span>
+        </span>
+      </label>
+
+      <label class="row">
+        <span class="text">
+          <strong>Hide every video post</strong>
+          <small>Strict mode: also hides ordinary posts that contain a video.</small>
+        </span>
+        <span class="switch">
+          <input type="checkbox" data-key="hideAllVideoPosts" />
+          <span class="track"></span>
+        </span>
+      </label>
+    </main>
+
+    <footer>
+      <span id="count">Nothing blocked yet</span>
+      <button type="button" id="reset" hidden>Reset</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

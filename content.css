@@ -1,0 +1,34 @@
+/* Anything the content script decides to block. */
+[data-lrb-hidden] {
+  display: none !important;
+}
+
+/* Hide an obvious "Video" tab in the top nav before the script even runs. */
+html[data-lrb-nav] #global-nav li:has(> a[href*="/videos/"]),
+html[data-lrb-nav] #global-nav li:has(> a[href$="/videos"]),
+html[data-lrb-nav] #global-nav li:has(> a[href*="/feed/video"]) {
+  display: none !important;
+}
+
+/* Small confirmation shown when a reel is blocked. */
+#lrb-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 2147483647;
+  transform: translate(-50%, 12px);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.94);
+  color: #fff;
+  font: 500 14px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+#lrb-toast.lrb-show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
